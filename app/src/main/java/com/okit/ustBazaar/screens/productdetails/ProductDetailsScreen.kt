@@ -41,6 +41,7 @@ import com.okit.ustBazaar.sealed.Orientation
 import com.okit.ustBazaar.ui.theme.Dimension
 import com.okit.ustBazaar.utils.addMoveAnimation
 import com.okit.ustBazaar.utils.getValidColor
+import com.okit.ustBazaar.R
 
 @Composable
 fun ProductDetailsScreen(

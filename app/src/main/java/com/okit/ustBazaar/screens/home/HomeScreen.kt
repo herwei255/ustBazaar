@@ -45,6 +45,7 @@ import com.okit.ustBazaar.sealed.UiState
 import com.okit.ustBazaar.ui.theme.Dimension
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import com.okit.ustBazaar.R
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable

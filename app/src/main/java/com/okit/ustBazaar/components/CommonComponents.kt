@@ -57,6 +57,7 @@ import com.okit.ustBazaar.sealed.Screen
 import com.okit.ustBazaar.ui.theme.Dimension
 import com.okit.ustBazaar.utils.getDiscountedValue
 import kotlin.math.roundToInt
+import com.okit.ustBazaar.R
 
 @Composable
 fun CustomInputField(
@@ -203,7 +204,7 @@ fun AppBottomNav(
                 val isActive = activeRoute.equals(other = it.route, ignoreCase = true)
                 AppBottomNavItem(
                     active = isActive,
-                    title = stringResource(id = it.title ?: R.string.home),
+                    title = stringResource(id = it.title ?: 1),
                     icon = it.icon ?: R.drawable.ic_home_empty,
                     onRouteClicked = {
                         if (!isActive) {

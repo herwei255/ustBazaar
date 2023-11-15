@@ -27,6 +27,7 @@ import com.okit.ustBazaar.components.CustomInputField
 import com.okit.ustBazaar.components.DrawableButton
 import com.okit.ustBazaar.sealed.UiState
 import com.okit.ustBazaar.ui.theme.Dimension
+import com.okit.ustBazaar.R
 
 @Composable
 fun LoginScreen(

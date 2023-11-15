@@ -60,6 +60,7 @@ import com.okit.ustBazaar.utils.getDiscountedValue
 import com.okit.ustBazaar.utils.getDp
 import com.skydoves.whatif.whatIfNotNull
 import kotlin.math.roundToInt
+import com.okit.ustBazaar.R
 
 @Composable
 fun CartScreen(
