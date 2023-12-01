@@ -22,7 +22,7 @@ import com.okit.ustBazaar.ui.theme.Dimension
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun PrivacyAndPolicies(
+fun PrivacyAndPoliciesScreen(
     privacyAndPoliciesViewModel: PrivacyAndPoliciesViewModel = hiltViewModel(),
     onBackRequested: () -> Unit,
 ) {

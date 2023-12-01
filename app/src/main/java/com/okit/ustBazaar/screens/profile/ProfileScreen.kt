@@ -93,8 +93,13 @@ fun ProfileScreen(
             ProfileOptionItem(
                 icon = option.icon,
                 title = option.title,
-                onOptionClicked = {},
+                onOptionClicked = { onNavigationRequested(option.route, false) },
             )
+        }
+        item {
+            LogoutButton(onLogoutClicked = {
+                profileViewModel.logout()
+            })
         }
     }
 }
@@ -170,5 +175,21 @@ fun ProfileHeaderSection(image: Int?, name: String, email: String?, phone: Strin
                     .copy(fontWeight = FontWeight.Medium),
             )
         }
+    }
+}
+
+@Composable
+fun LogoutButton(onLogoutClicked: () -> Unit) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onLogoutClicked() }
+    ) {
+        Text(
+            text = "Logout",
+            style = MaterialTheme.typography.body1,
+            color = MaterialTheme.colors.onBackground,
+            modifier = Modifier.padding(Dimension.pagePadding),
+        )
     }
 }

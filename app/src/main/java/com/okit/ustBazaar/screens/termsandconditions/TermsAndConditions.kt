@@ -23,7 +23,7 @@ import com.okit.ustBazaar.ui.theme.Dimension
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TermsAndConditions(
+fun TermsAndConditionsScreen(
     termsAndConditionsViewModel: TermsAndConditionsViewModel = hiltViewModel(),
     onBackRequested: () -> Unit,
 ) {

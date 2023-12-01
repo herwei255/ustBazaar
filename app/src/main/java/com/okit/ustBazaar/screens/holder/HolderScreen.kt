@@ -44,14 +44,14 @@ import com.okit.ustBazaar.screens.login.LoginScreen
 import com.okit.ustBazaar.screens.notifications.NotificationScreen
 import com.okit.ustBazaar.screens.onboard.OnboardScreen
 import com.okit.ustBazaar.screens.orderhistory.OrdersHistoryScreen
-import com.okit.ustBazaar.screens.privacypolicy.PrivacyAndPolicies
+import com.okit.ustBazaar.screens.privacypolicy.PrivacyAndPoliciesScreen
 import com.okit.ustBazaar.screens.productdetails.ProductDetailsScreen
 import com.okit.ustBazaar.screens.profile.ProfileScreen
 import com.okit.ustBazaar.screens.search.SearchScreen
 import com.okit.ustBazaar.screens.settings.SettingsScreen
 import com.okit.ustBazaar.screens.signup.SignupScreen
 import com.okit.ustBazaar.screens.splash.SplashScreen
-import com.okit.ustBazaar.screens.termsandconditions.TermsAndConditions
+import com.okit.ustBazaar.screens.termsandconditions.TermsAndConditionsScreen
 import com.okit.ustBazaar.sealed.Screen
 import com.okit.ustBazaar.utils.UserPref
 import com.okit.ustBazaar.utils.getDp
@@ -404,13 +404,13 @@ fun ScaffoldSection(
                 }
                 composable(Screen.PrivacyPolicies.route) {
                     onStatusBarColorChange(MaterialTheme.colors.background)
-                    PrivacyAndPolicies(
+                    PrivacyAndPoliciesScreen(
                         onBackRequested = onBackRequested
                     )
                 }
                 composable(Screen.TermsConditions.route) {
                     onStatusBarColorChange(MaterialTheme.colors.background)
-                    TermsAndConditions(
+                    TermsAndConditionsScreen(
                         onBackRequested = onBackRequested
                     )
                 }
