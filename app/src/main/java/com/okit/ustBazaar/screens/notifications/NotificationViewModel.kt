@@ -13,5 +13,4 @@ import javax.inject.Inject
 @HiltViewModel
 class NotificationViewModel @Inject constructor() : ViewModel() {
     val uiState = mutableStateOf<UiState>(UiState.Idle)
-
 }
