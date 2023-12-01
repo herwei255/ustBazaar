@@ -195,9 +195,9 @@ abstract class RoomDb : RoomDatabase() {
             ),
         )
         private val userLocation = Location(
-            address = "AlTaif 51, st 5",
-            city = "Khartoum",
-            country = "Sudan",
+            address = "HKUST",
+            city = "Hong Kong",
+            country = "China",
         )
 
         init {
@@ -229,9 +229,9 @@ abstract class RoomDb : RoomDatabase() {
                 dao.saveUser(
                     User(
                         userId = 1,
-                        name = "John Doe",
-                        profile = R.drawable.mustapha_profile,
-                        phone = "+85288888888",
+                        name = "Okit Testing User",
+                        profile = R.drawable.empty_user,
+                        phone = "+852 1234 5678",
                         email = "okit@gmail.com",
                         password = "12344321",
                         token = "ds2f434ls2ks2lsj2ls",

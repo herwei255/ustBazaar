@@ -68,43 +68,6 @@ fun ProfileScreen(
                 phone = user.phone,
             )
         }
-        /** Add virtual card section */
-        item {
-            Card(
-                modifier = Modifier.clickable { },
-                shape = MaterialTheme.shapes.medium,
-                backgroundColor = MaterialTheme.colors.secondary,
-                contentColor = MaterialTheme.colors.onSecondary,
-            ) {
-                Column(
-                    modifier = Modifier.padding(Dimension.pagePadding),
-                    verticalArrangement = Arrangement.spacedBy(Dimension.md),
-                ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(
-                            modifier = Modifier.weight(1f),
-                            text = "Add virtual card",
-                            style = MaterialTheme.typography.button,
-                        )
-                        IconButton(
-                            icon = Icons.Rounded.KeyboardArrowRight,
-                            backgroundColor = MaterialTheme.colors.background,
-                            iconTint = MaterialTheme.colors.onBackground,
-                            onButtonClicked = {},
-                            iconSize = Dimension.smIcon,
-                            paddingValue = PaddingValues(Dimension.xs),
-                            shape = MaterialTheme.shapes.medium,
-                        )
-                    }
-                    Text(
-                        text = "Virtual cards allow you to purchase products on the store.",
-                        style = MaterialTheme.typography.body2,
-                    )
-                }
-            }
-        }
         /** General options */
         item {
             Text(
@@ -116,11 +79,7 @@ fun ProfileScreen(
             ProfileOptionItem(
                 icon = option.icon,
                 title = option.title,
-                onOptionClicked = {
-                    if (option is Screen.OrderHistory) {
-                        onNavigationRequested(option.route, false)
-                    }
-                },
+                onOptionClicked = { onNavigationRequested(option.route, false) },
             )
         }
         /** Personal options */
@@ -134,8 +93,13 @@ fun ProfileScreen(
             ProfileOptionItem(
                 icon = option.icon,
                 title = option.title,
-                onOptionClicked = {},
+                onOptionClicked = { onNavigationRequested(option.route, false) },
             )
+        }
+        item {
+            LogoutButton(onLogoutClicked = {
+                profileViewModel.logout()
+            })
         }
     }
 }
@@ -211,5 +175,21 @@ fun ProfileHeaderSection(image: Int?, name: String, email: String?, phone: Strin
                     .copy(fontWeight = FontWeight.Medium),
             )
         }
+    }
+}
+
+@Composable
+fun LogoutButton(onLogoutClicked: () -> Unit) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onLogoutClicked() }
+    ) {
+        Text(
+            text = "Logout",
+            style = MaterialTheme.typography.body1,
+            color = MaterialTheme.colors.onBackground,
+            modifier = Modifier.padding(Dimension.pagePadding),
+        )
     }
 }
