@@ -286,7 +286,9 @@ fun ScaffoldSection(
                 composable(Screen.Login.route) {
                     onStatusBarColorChange(MaterialTheme.colors.background)
                     LoginScreen(
-                        onUserAuthenticated = onBackRequested,
+                        onUserAuthenticated = {
+                            onNavigationRequested(Screen.Home.route, true)
+                        },
                         onToastRequested = onToastRequested,
                     )
                 }
