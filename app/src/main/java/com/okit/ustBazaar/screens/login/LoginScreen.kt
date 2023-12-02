@@ -151,7 +151,7 @@ fun LoginScreen(
                     },
                     onAuthenticationFailed = {
                         /** Do whatever you want when it failed */
-                        onToastRequested("Make sure you fill the form!", Color.Red)
+                        onToastRequested("Invalid Form Input!", Color.Red)
                     }
                 )
             },
@@ -219,35 +219,6 @@ fun LoginScreen(
                 shape = MaterialTheme.shapes.medium,
                 iconSize = Dimension.mdIcon.times(0.8f),
             )
-            DrawableButton(
-                paddingValue = PaddingValues(Dimension.sm),
-                elevation = Dimension.elevation,
-                painter = painterResource(id = R.drawable.ic_apple),
-                onButtonClicked = {},
-                backgroundColor = MaterialTheme.colors.background,
-                shape = MaterialTheme.shapes.medium,
-                iconSize = Dimension.mdIcon.times(0.8f),
-            )
         }
-        Divider(Modifier.padding(vertical = Dimension.pagePadding))
-        CustomButton(
-            modifier = Modifier,
-            shape = MaterialTheme.shapes.large,
-            elevationEnabled = false,
-            padding = PaddingValues(
-                horizontal = Dimension.pagePadding,
-                vertical = Dimension.xs
-            ),
-            buttonColor = MaterialTheme.colors.background,
-            contentColor = MaterialTheme.colors.primary,
-            text = stringResource(id = R.string.privacy_and_policies),
-            enabled = uiState !is UiState.Loading,
-            textStyle = MaterialTheme.typography.caption
-                .copy(fontWeight = FontWeight.SemiBold),
-            onButtonClicked = {
-                /** Handle the click event of the policies & terms button */
-
-            },
-        )
     }
 }

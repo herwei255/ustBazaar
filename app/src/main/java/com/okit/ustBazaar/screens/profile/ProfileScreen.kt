@@ -99,6 +99,7 @@ fun ProfileScreen(
         item {
             LogoutButton(onLogoutClicked = {
                 profileViewModel.logout()
+                onNavigationRequested(Screen.Login.route, true)
             })
         }
     }
