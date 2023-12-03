@@ -109,7 +109,7 @@ fun ProductDetailsScreen(
                                 , horizontalAlignment = Alignment.CenterHorizontally
                             ) {
                                 AsyncImage(
-                                    model = "https://placehold.co/600x400/EEE/31343C",
+                                    model = "https://fakeimg.pl/600x400?text=Place+Holder+Image",
                                     contentDescription = "Translated description of what the image contains",
                                     contentScale = ContentScale.Crop
                                 )
