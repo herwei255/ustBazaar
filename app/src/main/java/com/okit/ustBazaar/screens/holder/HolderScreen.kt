@@ -35,6 +35,7 @@ import com.okit.ustBazaar.components.CustomSnackBar
 import com.okit.ustBazaar.room_models.CartItem
 import com.okit.ustBazaar.room_models.User
 import com.okit.ustBazaar.providers.LocalNavHost
+import com.okit.ustBazaar.repositories.ProductsRepository
 import com.okit.ustBazaar.screens.bookmarks.BookmarksScreen
 import com.okit.ustBazaar.screens.cart.CartScreen
 import com.okit.ustBazaar.screens.checkout.CheckoutScreen
@@ -45,6 +46,7 @@ import com.okit.ustBazaar.screens.notifications.NotificationScreen
 import com.okit.ustBazaar.screens.onboard.OnboardScreen
 import com.okit.ustBazaar.screens.orderhistory.OrdersHistoryScreen
 import com.okit.ustBazaar.screens.privacypolicy.PrivacyAndPoliciesScreen
+import com.okit.ustBazaar.screens.createproduct.CreateProductScreen
 import com.okit.ustBazaar.screens.productdetails.ProductDetailsScreen
 import com.okit.ustBazaar.screens.profile.ProfileScreen
 import com.okit.ustBazaar.screens.search.SearchScreen
@@ -64,7 +66,7 @@ fun HolderScreen(
     holderViewModel: HolderViewModel = hiltViewModel(),
 ) {
     val destinations = remember {
-        listOf(Screen.Home, Screen.Notifications, Screen.Bookmark, Screen.Profile)
+        listOf(Screen.Home, Screen.CreateProduct, Screen.Bookmark, Screen.Profile)
     }
 
     /** Our navigation controller that the MainActivity provides */
@@ -307,6 +309,10 @@ fun ScaffoldSection(
                     onStatusBarColorChange(MaterialTheme.colors.background)
                     NotificationScreen()
                 }
+                composable(Screen.CreateProduct.route) {
+                    onStatusBarColorChange(MaterialTheme.colors.background)
+                    CreateProductScreen()
+                }
                 composable(Screen.Search.route) {
                     onStatusBarColorChange(MaterialTheme.colors.background)
                     SearchScreen()
@@ -425,7 +431,7 @@ fun ScaffoldSection(
                     onStatusBarColorChange(MaterialTheme.colors.background)
                     val productId = it.arguments?.getInt("productId")
                         ?: throw IllegalArgumentException("Product id is required")
-
+                    println("productid" + productId);
                     ProductDetailsScreen(
                         productId = productId,
                         cartItemsCount = cartItems.size,

@@ -63,14 +63,11 @@ fun ProductDetailsScreen(
             .fillMaxSize()
             .background(MaterialTheme.colors.background)
             .padding(Dimension.pagePadding)
-            .verticalScroll(
-                rememberScrollState()),
-                        horizontalAlignment = Alignment . CenterHorizontally,
+            .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment . CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(Dimension.pagePadding),
             ) {
                 val product by remember { productDetailsViewModel.product }
-                val color by remember { productDetailsViewModel.selectedColor }
-                val size by remember { productDetailsViewModel.selectedSize }
                 val scale by remember { productDetailsViewModel.sizeScale }
                 val animatedScale by animateFloatAsState(
                     targetValue = scale,
@@ -109,24 +106,10 @@ fun ProductDetailsScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .align(Alignment.Center)
-//                            .offset(x = (-20).dp)
                                 , horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                // Image(
-                                //     painter = rememberAsyncImagePainter(model = it.colors?.find { productColor ->
-                                //         productColor.colorName == color
-                                //     }?.image ?: it.image
-                                //     ),
-                                //     contentDescription = null,
-                                //     contentScale = ContentScale.Fit
-                                // )
-//                        Image(
-//                            painter = rememberAsyncImagePainter(data = "https://i.pinimg.com/1200x/85/7b/e2/857be27895892ba6f90690145d68e7ee.jpg"),
-//                            contentDescription = null,
-//                            contentScale = ContentScale.Fit
-//                        )
                                 AsyncImage(
-                                    model = "https://i.pinimg.com/1200x/85/7b/e2/857be27895892ba6f90690145d68e7ee.jpg",
+                                    model = "https://placehold.co/600x400/EEE/31343C",
                                     contentDescription = "Translated description of what the image contains",
                                     contentScale = ContentScale.Crop
                                 )
@@ -160,8 +143,7 @@ fun ProductDetailsScreen(
                                         contentDescription = "Total likes"
                                     )
                                     Text(
-//                                text = "${it.totalLikes} likes",
-                                        text = "6 likes",
+                                        text = "4 likes",
                                         style = MaterialTheme.typography.h4,
                                     )
                                 }
@@ -180,22 +162,6 @@ fun ProductDetailsScreen(
                                 isOnBookmarks = isOnBookmarksStateProvider(),
                                 onBookmarkChange = { onUpdateBookmarksState(productId) }
                             )
-                            /** colors section */
-//                    it.colors?.let { colors ->
-//                        ColorsSection(
-//                            modifier = Modifier
-//                                .align(Alignment.BottomEnd)
-//                                .addMoveAnimation(
-//                                    orientation = Orientation.Vertical,
-//                                    from = 200.dp,
-//                                    to = 0.dp,
-//                                    duration = 700,
-//                                ),
-//                            colors = colors.map { color -> color.colorName },
-//                            pickedColorProvider = { color },
-//                            onColorPicked = productDetailsViewModel::updateSelectedColor,
-//                        )
-//                    }
                         }
                         /** Posted date and posted by user */
                         Text(

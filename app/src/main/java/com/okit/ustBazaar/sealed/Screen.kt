@@ -47,6 +47,12 @@ sealed class Screen(
         icon = R.drawable.ic_notifications,
     )
 
+    object CreateProduct: Screen(
+        route="create-product",
+        title=R.string.create_product,
+        icon= R.drawable.create_product,
+    )
+
     object Search : Screen(
         route = "search",
         title = R.string.search,

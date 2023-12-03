@@ -182,18 +182,6 @@ fun HomeScreen(
                         }
                     )
                 }
-                /** Advertisements section */
-//                item(
-//                    span = {
-//                        GridItemSpan(2)
-//                    }
-//                ) {
-//                    AdvertisementsPager(
-//                        pagerState = pagerState,
-//                        advertisements = advertisements,
-//                        onAdvertiseClicked = {}
-//                    )
-//                }
             }
             is UiState.Error -> {}
         }

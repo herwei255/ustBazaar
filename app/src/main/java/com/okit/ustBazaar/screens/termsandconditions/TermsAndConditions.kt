@@ -15,6 +15,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.okit.ustBazaar.components.SecondaryTopBar
 import com.okit.ustBazaar.R
@@ -48,12 +49,12 @@ fun TermsAndConditionsScreen(
                         .fillMaxWidth()
                         .padding(Dimension.pagePadding)
                 ) {
-                    Text(text = "Acceptance of Terms and Conditions:")
+                    Text(text = "Acceptance of Terms and Conditions:", fontSize = 20.sp)
                     Text(text = "By accessing and using this application, you agree to be bound by the following terms and conditions. If you do not agree with any of these terms, please refrain from using the application. These terms and conditions govern your use of the application and all its associated services. You understand and acknowledge that these terms may be updated or modified from time to time, and it is your responsibility to review them periodically. Continued usage of the application after any amendments constitutes your acceptance of the revised terms and conditions.")
 
                     Spacer(modifier = Modifier.height(Dimension.sm))
 
-                    Text(text = "User Responsibilities:")
+                    Text(text = "User Responsibilities:", fontSize = 20.sp)
                     Text(text = "When using this application, you agree to comply with all applicable laws and regulations. You are solely responsible for any content you submit, post, or share through the application. You must ensure that your actions and activities do not violate the rights of others or infringe upon any intellectual property rights. You agree not to engage in any unauthorized or illegal activities, including but not limited to hacking, spamming, or transmitting malicious software. Furthermore, you understand and accept that the application's administrators reserve the right to suspend or terminate your access to the services if you violate any of these terms and conditions.")
                 }
             }

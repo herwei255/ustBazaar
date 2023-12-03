@@ -49,7 +49,6 @@ abstract class RoomDb : RoomDatabase() {
             Category(id = 2, name = "Dorm", icon = R.drawable.ic_dorm),
             Category(id = 3, name = "Free Items", icon = R.drawable.ic_free_items),
             Category(id = 4, name = "Textbooks", icon = R.drawable.ic_book),
-//            Category(id = 5, name = "Electronics", icon = R.drawable.ic_book),
         )
         private val advertisements = listOf(
             Advertisement(1, R.drawable.air_huarache_gold_black_ads, 1, 0),
@@ -244,25 +243,11 @@ abstract class RoomDb : RoomDatabase() {
                     dao.insertCategory(it)
                 }
             }
-            /** insert advertisements */
-//            scope.launch {
-//                advertisements.forEach {
-//                    dao.insertAdvertisement(it)
-//                }
-//            }
             /** Insert products */
             scope.launch {
                 nikeProducts.plus(adidasProducts).forEach {
                     /** Insert the product itself */
                     dao.insertProduct(product = it)
-                    /** Insert colors */
-                    it.colors?.forEach { productColor ->
-                        dao.insertOtherProductCopy(productColor)
-                    }
-                    /** Insert size */
-                    it.sizes?.forEach { productSize ->
-                        dao.insertSize(productSize)
-                    }
                 }
             }
             /** Insert payment providers */

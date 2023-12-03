@@ -33,6 +33,8 @@ interface RoomDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSize(productSize: ProductSize)
 
+    @Query("SELECT * FROM product")
+    suspend fun getAllProducts(): List<Product>
 
     /** Advertisements operations */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
