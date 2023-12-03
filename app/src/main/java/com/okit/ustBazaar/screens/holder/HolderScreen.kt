@@ -173,7 +173,7 @@ fun HolderScreen(
                 }
             },
             onBoardFinished = {
-                controller.navigate(Screen.Home.route) {
+                controller.navigate(Screen.Profile.route) {
                     popUpTo(Screen.Onboard.route) {
                         inclusive = true
                     }

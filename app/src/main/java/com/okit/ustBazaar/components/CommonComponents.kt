@@ -250,7 +250,7 @@ fun AppBottomNav(
                     color = MaterialTheme.colors.primary,
                     shape = CircleShape,
                 ),
-            painter = painterResource(id = R.drawable.ic_add),
+            painter = painterResource(id = R.drawable.ic_shopping_bag),
             backgroundColor = if (activeRoute == Screen.Cart.route) MaterialTheme.colors.primary
             else MaterialTheme.colors.background,
             iconSize = Dimension.mdIcon.times(0.8f),
@@ -463,17 +463,6 @@ fun ProductItemLayout(
                 .aspectRatio(1f)
                 .clip(MaterialTheme.shapes.medium)
         ) {
-
-//            Box(
-//                modifier = Modifier
-//                    .align(Alignment.BottomCenter)
-//                    .fillMaxWidth()
-//                    .height(this.constraints.maxHeight
-//                        .div(2)
-//                        .getDp())
-//                    .clip(MaterialTheme.shapes.medium)
-//                    .background(MaterialTheme.colors.surface),
-//            )
             AsyncImage(
                 model = image,
                 contentDescription = null,

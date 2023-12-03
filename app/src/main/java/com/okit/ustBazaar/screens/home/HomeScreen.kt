@@ -208,7 +208,6 @@ fun HomeScreen(
                         }
                     }
                 }
-                /** Show selected brand's data */
                 items(brands[currentSelectedBrandIndex].products) { product ->
                     ProductItemLayout(
                         modifier = Modifier
