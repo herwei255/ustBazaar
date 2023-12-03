@@ -16,7 +16,14 @@
     <string name="continue_next">Continue</string>
     <string name="get_started">Get Started 🔥</string>
     <string name="cart">Cart</string>
+    <string name="create_product">Create Product</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="product_name">Product Details</string>
+    <string name="product_description">Product Description</string>
     <string name="product_details">Product Details</string>
+    <string name="product_price">Price</string>
+    <string name="product_image_preview">Image Preview</string>
+    <string name="product_category">Category</string>
     <string name="x_dollar">$ %1$s</string>
     <string name="discover">Discover</string>
     <string name="share">Share</string>

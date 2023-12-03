@@ -20,6 +20,10 @@ class ProductsRepository @Inject constructor(
     private val dao: RoomDao,
 ) {
 
+    suspend fun getProdcuts() {
+        dao.getAllProducts()
+    }
+
     suspend fun updateCartState(productId: Int, alreadyOnCart: Boolean) {
         /** Handle the local storing process */
         handleLocalCart(productId = productId, alreadyOnCart = alreadyOnCart)
@@ -125,6 +129,10 @@ class ProductsRepository @Inject constructor(
         }
         /** Doesn't exist on the local, check remote */
         return DataResponse.Error(error = Error.Network)
+    }
+
+    suspend fun createProduct(product: Product) {
+        dao.insertProduct(product = product)
     }
 
     suspend fun getOrdersHistory(): DataResponse<List<OrderDetails>> {
