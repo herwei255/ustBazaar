@@ -60,21 +60,6 @@ fun SplashScreen(
                     /** Not launched before so we should navigate to Onboard screen */
                     onSplashFinished(Screen.Onboard)
                 }
-                // loggedUserId.whatIfNotNull(
-                //     whatIf = {
-                //         splashViewModel.checkLoggedUser(
-                //             userId = it,
-                //             onCheckFinish = {
-                //                 /** Launched before and user checked, we should go to home now */
-                //                 onSplashFinished(Screen.Home)
-                //             }
-                //         )
-                //     },
-                //     whatIfNot = {
-                //         /** Launched before, we should go to home now */
-                //         onSplashFinished(Screen.Login)
-                //     }
-                // )
         }
         val appName = stringResource(id = R.string.app_name)
         Text(

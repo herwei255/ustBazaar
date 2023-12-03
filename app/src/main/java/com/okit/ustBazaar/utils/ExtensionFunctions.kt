@@ -78,17 +78,6 @@ fun <T> Throwable.handleResponseException(): DataResponse<T> {
     }
 }
 
-
-/** An extension function that is used to mirror the compose icons when using rtl languages like arabic and urdu */
-fun Modifier.mirror(): Modifier {
-    return when (Locale.getDefault().layoutDirection) {
-        /** If app layout direction is rtl , then flip our icon horizontally (as a mirror) */
-        LayoutDirection.RTL -> this.scale(scaleX = -1f, scaleY = 1f)
-        /** If is ltr , just forget about this amigo ! */
-        else -> this
-    }
-}
-
 /** An extension function on Date's object that is used to get a formatted date & time.
  * It takes the pattern that you want.
  * Shortcuts: yyyy: year , MM: month , dd: day , HH: hour , mm: minutes.

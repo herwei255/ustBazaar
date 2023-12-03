@@ -113,7 +113,7 @@ fun OnboardScreen(
                         to = 0.dp,
                         duration = 1000,
                     ),
-                text = "We’re on a mission to help students live an easier, cheaper and more sustainable life.",
+                text = "We're on a mission to help students live an easier, cheaper and more sustainable life.",
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.body2.copy(
                     fontWeight = FontWeight.Medium,
