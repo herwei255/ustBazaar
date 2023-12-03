@@ -50,117 +50,127 @@ abstract class RoomDb : RoomDatabase() {
             Category(id = 3, name = "Free Items", icon = R.drawable.ic_free_items),
             Category(id = 4, name = "Textbooks", icon = R.drawable.ic_book),
         )
-        private val advertisements = listOf(
-            Advertisement(1, R.drawable.air_huarache_gold_black_ads, 1, 0),
-            Advertisement(2, R.drawable.pegasus_trail_gortex_ads, 2, 0),
-            Advertisement(3, R.drawable.blazer_low_black_ads, 3, 0),
-        )
-        private val nikeProducts = listOf(
+        private val apparelProducts = listOf(
             Product(
                 id = 1,
-                name = "Pegasus Trail Gortex Green",
-                image = R.drawable.pegasus_trail_3_gore_tex_dark_green,
+                name = "Black Shirt",
+                image = R.drawable.apparel_1,
                 price = 149.0,
                 description = description,
                 categoryId = 1,
                 basicColorName = "dark-green",
-            ).also {
-                it.colors = mutableListOf(
-                    ProductColor(productId = it.id,
-                        colorName = it.basicColorName,
-                        image = it.image),
-                    ProductColor(productId = it.id,
-                        colorName = "lemon",
-                        image = R.drawable.pegasus_trail_3_gore_tex_lemon),
-                )
-            },
+            ),
             Product(
-                id = 3,
-                name = "Air Huarache Gold",
-                image = R.drawable.air_huarache_le_gold_black,
+                id = 2,
+                name = "Red Shirt",
+                image = R.drawable.apparel_2,
                 price = 159.0,
                 description = description,
                 categoryId = 1,
                 basicColorName = "gold",
-            ).also {
-                it.colors = mutableListOf(
-                    ProductColor(productId = it.id,
-                        colorName = it.basicColorName,
-                        image = it.image),
-                    ProductColor(productId = it.id,
-                        colorName = "gray",
-                        image = R.drawable.air_huarache_le_gray_dark),
-                    ProductColor(productId = it.id,
-                        colorName = "pink",
-                        image = R.drawable.air_huarache_le_pink_black),
-                    ProductColor(productId = it.id,
-                        colorName = "red",
-                        image = R.drawable.air_huarache_le_red_black),
-                )
-            },
+            ),
             Product(
-                id = 7,
-                name = "Blazer Low Black",
-                image = R.drawable.blazer_low_black,
+                id = 3,
+                name = "Maroon Shirt",
+                image = R.drawable.apparel_3,
                 price = 120.0,
                 description = description,
                 categoryId = 1,
                 basicColorName = "black",
-            ).also {
-                it.colors = mutableListOf(
-                    ProductColor(productId = it.id,
-                        colorName = it.basicColorName,
-                        image = it.image),
-                    ProductColor(productId = it.id,
-                        colorName = "pink",
-                        image = R.drawable.blazer_low_pink),
-                    ProductColor(productId = it.id,
-                        colorName = "lemon",
-                        image = R.drawable.blazer_low_light_green),
-                )
-            },
+            ),
+            Product(
+                id = 4,
+                name = "Old Uncle Shirt",
+                image = R.drawable.apparel_4,
+                price = 421.0,
+                description = description,
+                categoryId = 1,
+                basicColorName = "black",
+            ),
+            Product(
+                id = 5,
+                name = "Pants",
+                image = R.drawable.apparel_5,
+                price = 15.0,
+                description = description,
+                categoryId = 1,
+                basicColorName = "black",
+            ),
+            Product(
+                id = 6,
+                name = "Formal Pants",
+                image = R.drawable.apparel_6,
+                price = 152.0,
+                description = description,
+                categoryId = 1,
+                basicColorName = "black",
+            ),
+            Product(
+                id = 7,
+                name = "Sweater",
+                image = R.drawable.apparel_7,
+                price = 122.0,
+                description = description,
+                categoryId = 1,
+                basicColorName = "black",
+            ),
+            Product(
+                id = 8,
+                name = "Green Sweater",
+                image = R.drawable.apparel_8,
+                price = 152.0,
+                description = description,
+                categoryId = 1,
+                basicColorName = "black",
+            ),
         )
-        private val adidasProducts = listOf(
+        private val otherProducts = listOf(
             Product(
                 id = 10,
-                name = "Defiant Generation Green",
-                image = R.drawable.defiant_generation_green,
-                price = 149.0,
+                name = "Hanger",
+                image = R.drawable.dorm_1,
+                price = 10.0,
                 description = description,
                 categoryId = 2,
                 basicColorName = "green",
-            ).also {
-                it.colors = mutableListOf(
-                    ProductColor(productId = it.id,
-                        colorName = it.basicColorName,
-                        image = it.image),
-                    ProductColor(productId = it.id,
-                        colorName = "red",
-                        image = R.drawable.defiant_generation_red),
-                )
-            },
-
+            ),
             Product(
-                id = 12,
-                name = "Solarthon Primegreen Gray",
-                image = R.drawable.solarthon_primegreen_gray,
+                id = 11,
+                name = "Hair Dryer",
+                image = R.drawable.dorm_2,
                 price = 159.0,
                 description = description,
                 categoryId = 2,
                 basicColorName = "gray",
-            ).also {
-                it.colors = mutableListOf(
-                    ProductColor(productId = it.id,
-                        colorName = it.basicColorName,
-                        image = it.image),
-                    ProductColor(productId = it.id,
-                        colorName = "black",
-                        image = R.drawable.solarthon_primegreen_black),
-                    ProductColor(productId = it.id,
-                        colorName = "red",
-                        image = R.drawable.solarthon_primegreen_red),
-                )
-            },
+            ),
+            Product(
+                id = 12,
+                name = "Tissues",
+                image = R.drawable.dorm_3,
+                price = 5.0,
+                description = description,
+                categoryId = 2,
+                basicColorName = "gray",
+            ),
+            Product(
+                id = 13,
+                name = "Expensive Textbook",
+                image = R.drawable.textbook_1,
+                price = 150.0,
+                description = description,
+                categoryId = 4,
+                basicColorName = "gray",
+            ),
+            Product(
+                id = 14,
+                name = "Free Textbook",
+                image = R.drawable.textbook_2,
+                price = 0.0,
+                description = description,
+                categoryId = 3,
+                basicColorName = "gray",
+            ),
+
         )
         private val paymentProviders = listOf(
             PaymentProvider(
@@ -200,23 +210,6 @@ abstract class RoomDb : RoomDatabase() {
         )
 
         init {
-            nikeProducts.onEach {
-                it.sizes = mutableListOf(
-                    ProductSize(it.id, 38),
-                    ProductSize(it.id, 40),
-                    ProductSize(it.id, 42),
-                    ProductSize(it.id, 44),
-                )
-            }
-            adidasProducts.onEach {
-                it.sizes = mutableListOf(
-                    ProductSize(it.id, 38),
-                    ProductSize(it.id, 40),
-                    ProductSize(it.id, 42),
-                    ProductSize(it.id, 44),
-                )
-            }
-
             scope.launch {
                 populateDatabase(dao = client.get().getDao(), scope = scope)
             }
@@ -245,7 +238,7 @@ abstract class RoomDb : RoomDatabase() {
             }
             /** Insert products */
             scope.launch {
-                nikeProducts.plus(adidasProducts).forEach {
+                apparelProducts.plus(otherProducts).forEach {
                     /** Insert the product itself */
                     dao.insertProduct(product = it)
                 }
